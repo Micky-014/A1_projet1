@@ -9,4 +9,7 @@ public class PersonnelCabine extends Employe {    private int licence;
     public String getQualification() {
         return qualification;
     }
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
 }

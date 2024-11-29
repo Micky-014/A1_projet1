@@ -11,7 +11,13 @@ public class Pilote extends Employe {
     public int getLicence() {
         return licence;
     }
+    public void setLicence(int licence) {
+        this.licence = licence;
+    }
     public int getHeureDeVol() {
         return heureDeVol;
+    }
+    public void setHeureDeVol(int heureDeVol) {
+        this.heureDeVol = heureDeVol;
     }
 }

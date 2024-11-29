@@ -9,6 +9,9 @@ public class Passager extends Personne{
     public String getPasseport() {
         return passeport;
     }
+    public void setPasseport(String passeport) {
+        this.passeport = passeport;
+    }
     public void ObtenirInfos(){
         super.ObtenirInfos();
         System.out.println("Passeport: " + passeport);

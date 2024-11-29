@@ -7,7 +7,7 @@ public class Main {
         Personne personne = new Personne("Micky", "Paris", "0611111111");
         personne.ObtenirInfos();
         Pilote pilote = new Pilote( 1,  5000,1,"01/04/2004", "Theotim", "Paris", "0622222222");
-        pilote.ObteniRole();
         pilote.ObtenirInfos();
+        pilote.ObteniRole(2);
     }
 }
