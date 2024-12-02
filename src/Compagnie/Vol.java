@@ -1,10 +1,11 @@
 package Compagnie;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Vol {
-    private String numeroVol;
+    private int numeroVol;
     private String origine;
     private String destination;
     private String dateHeureDepart;
@@ -13,7 +14,7 @@ public class Vol {
     private Pilote pilote;
     private List<PersonnelCabine> equipageCabine = new ArrayList<>();
 
-    public Vol(String numeroVol, String origine, String destination, String dateHeureDepart, String dateHeureArrivee) {
+    public Vol(int numeroVol, String origine, String destination, String dateHeureDepart, String dateHeureArrivee) {
         this.numeroVol = numeroVol;
         this.origine = origine;
         this.destination = destination;
@@ -21,7 +22,7 @@ public class Vol {
         this.dateHeureArrivee = dateHeureArrivee;
         this.etat = "Prévu";
     }
-    public String getNumeroVol() {
+    public int getNumeroVol() {
         return numeroVol;
     }
     public String getOrigine() {
@@ -45,7 +46,7 @@ public class Vol {
     public List<PersonnelCabine> getEquipageCabine() {
         return equipageCabine;
     }
-    public void setNumeroVol(String numeroVol) {
+    public void setNumeroVol(int numeroVol) {
         this.numeroVol = numeroVol;
     }
     public void setOrigine(String origine) {
@@ -69,5 +70,16 @@ public class Vol {
     public void setEquipageCabine(List<PersonnelCabine> equipageCabine) {
         this.equipageCabine = equipageCabine;
     }
+    public void getInfos(){
+        System.out.println("Numero vol: " + numeroVol);
+        System.out.println("Origine: " + origine);
+        System.out.println("Destination: " + destination);
+        System.out.println("Date heure depart: " + dateHeureDepart);
+        System.out.println("Date heure arrivee: " + dateHeureArrivee);
+        System.out.println("Etat: " + etat);
+        System.out.println("Pilote: " + pilote);
+        System.out.println("Equipage cabine: " + equipageCabine);
+    }
+
 }
 //public void affecterVol(Pilote pilote, List<PersonnelCabine> equipage)
