@@ -8,6 +8,6 @@ public class Main {
         personne.ObtenirInfos();
         Pilote pilote = new Pilote( 1,  5000,1,"01/04/2004", "Theotim", "Paris", "0622222222");
         pilote.ObtenirInfos();
-        pilote.ObteniRole(2);
+        pilote.ObtenirRole(2);
     }
 }

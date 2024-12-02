@@ -32,7 +32,7 @@ public class Employe extends Personne{
         System.out.println("Numéro Employé: " + numeroEmploye);
         System.out.println("Date Embauche: " + dateEmbauche);
     }
-    public void ObteniRole(int iD){
+    public void ObtenirRole(int iD){
         for (int i = 0; i < listEmployes.size(); i++){
             if (listEmployes.get(i).getID()==iD){
                 System.out.println("Role: "+listEmployes.get(i).getClass().getName());

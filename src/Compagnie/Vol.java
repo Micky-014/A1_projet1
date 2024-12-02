@@ -1,0 +1,73 @@
+package Compagnie;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Vol {
+    private String numeroVol;
+    private String origine;
+    private String destination;
+    private String dateHeureDepart;
+    private String dateHeureArrivee;
+    private String etat;
+    private Pilote pilote;
+    private List<PersonnelCabine> equipageCabine = new ArrayList<>();
+
+    public Vol(String numeroVol, String origine, String destination, String dateHeureDepart, String dateHeureArrivee) {
+        this.numeroVol = numeroVol;
+        this.origine = origine;
+        this.destination = destination;
+        this.dateHeureDepart = dateHeureDepart;
+        this.dateHeureArrivee = dateHeureArrivee;
+        this.etat = "Prévu";
+    }
+    public String getNumeroVol() {
+        return numeroVol;
+    }
+    public String getOrigine() {
+        return origine;
+    }
+    public String getDestination() {
+        return destination;
+    }
+    public String getDateHeureDepart() {
+        return dateHeureDepart;
+    }
+    public String getDateHeureArrivee() {
+        return dateHeureArrivee;
+    }
+    public String getEtat() {
+        return etat;
+    }
+    public Pilote getPilote() {
+        return pilote;
+    }
+    public List<PersonnelCabine> getEquipageCabine() {
+        return equipageCabine;
+    }
+    public void setNumeroVol(String numeroVol) {
+        this.numeroVol = numeroVol;
+    }
+    public void setOrigine(String origine) {
+        this.origine = origine;
+    }
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+    public void setDateHeureDepart(String dateHeureDepart) {
+        this.dateHeureDepart = dateHeureDepart;
+    }
+    public void setDateHeureArrivee(String dateHeureArrivee) {
+        this.dateHeureArrivee = dateHeureArrivee;
+    }
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+    public void setPilote(Pilote pilote) {
+        this.pilote = pilote;
+    }
+    public void setEquipageCabine(List<PersonnelCabine> equipageCabine) {
+        this.equipageCabine = equipageCabine;
+    }
+}
+//public void affecterVol(Pilote pilote, List<PersonnelCabine> equipage)
