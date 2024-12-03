@@ -29,6 +29,8 @@ public class Passager extends Personne{
         listeReservation.put(reservation.getNumeroReservation(),reservation);
         reservation.getVol(vol);
         reservation.addResVol(vol);
+        vol.addListeReservations(reservation);
+        vol.addListePassagers(this);
     }
     public void annulerReservation(int idRes){
         Reservation reservation = listeReservation.get(idRes);

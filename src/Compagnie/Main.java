@@ -1,7 +1,7 @@
 package Compagnie;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.LocalDateTime;
+
 public class Main {
     public static void main(String[] args) {
         Personne personne = new Personne("Micky", "Paris", "0611111111");
@@ -13,7 +13,7 @@ public class Main {
         PersonnelCabine personnelCabine = new PersonnelCabine("Hotesse",2,"15/10/2015","Nastassia","Paris", "0633333333");
         personnelCabine.ObtenirInfos();
         personnelCabine.ObtenirRole(2);
-        Vol vol = new Vol(1,"Paris","Shanghai","0","0");
+        Vol vol = new Vol(1,"Paris","Shanghai",LocalDateTime.of(2024,12,3,14,30),LocalDateTime.of(2024,12,3,17,45));
         passager.reserverVol(vol);
         passager.obtenirReservation(1);
         Reservation reservation =passager.obtenirReservation(1);

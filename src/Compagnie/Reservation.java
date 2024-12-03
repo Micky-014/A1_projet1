@@ -36,12 +36,6 @@ public class Reservation {
     public void setStatut(String statut) {
         this.statut = statut;
     }
-    public void confirmeReservation(int numero) {
-        listeReservations.get(numero).setStatut("Confirmée");
-    }
-    public void annulerReservation(int numero) {
-        listeReservations.get(numero).setStatut("Annulée");
-    }
     public void getVol(Vol vol){
         reservations.add(vol);
     }
@@ -63,5 +57,11 @@ public class Reservation {
         System.out.println("Date reservation :"+ dateReservation);
         System.out.println("Statut :"+ statut);
         vol.getInfos();
+    }
+    public void annulerReservation(int numero) {
+        listeReservations.get(numero).setStatut("Annulée");
+    }
+    public void confirmeReservation(int numero) {
+        listeReservations.get(numero).setStatut("Confirmée");
     }
 }
