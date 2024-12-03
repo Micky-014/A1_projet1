@@ -3,18 +3,19 @@ package Compagnie;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.time.LocalDateTime;
 
 public class Vol {
     private int numeroVol;
     private String origine;
     private String destination;
-    private String dateHeureDepart;
-    private String dateHeureArrivee;
+    private LocalDateTime dateHeureDepart;
+    private LocalDateTime dateHeureArrivee;
     private String etat;
     private Pilote pilote;
     private List<PersonnelCabine> equipageCabine = new ArrayList<>();
 
-    public Vol(int numeroVol, String origine, String destination, String dateHeureDepart, String dateHeureArrivee) {
+    public Vol(int numeroVol, String origine, String destination, LocalDateTime dateHeureDepart, LocalDateTime dateHeureArrivee) {
         this.numeroVol = numeroVol;
         this.origine = origine;
         this.destination = destination;
@@ -31,10 +32,10 @@ public class Vol {
     public String getDestination() {
         return destination;
     }
-    public String getDateHeureDepart() {
+    public LocalDateTime getDateHeureDepart() {
         return dateHeureDepart;
     }
-    public String getDateHeureArrivee() {
+    public LocalDateTime getDateHeureArrivee() {
         return dateHeureArrivee;
     }
     public String getEtat() {
@@ -55,10 +56,10 @@ public class Vol {
     public void setDestination(String destination) {
         this.destination = destination;
     }
-    public void setDateHeureDepart(String dateHeureDepart) {
+    public void setDateHeureDepart(LocalDateTime dateHeureDepart) {
         this.dateHeureDepart = dateHeureDepart;
     }
-    public void setDateHeureArrivee(String dateHeureArrivee) {
+    public void setDateHeureArrivee(LocalDateTime dateHeureArrivee) {
         this.dateHeureArrivee = dateHeureArrivee;
     }
     public void setEtat(String etat) {
