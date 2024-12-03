@@ -4,11 +4,13 @@ import java.util.HashMap;
 
 public class Passager extends Personne{
     private String passeport;
-    private static HashMap<Integer,Vol> volReserve;
-    private static HashMap<Integer,Reservation> listeReservation;
-    public Passager(int numeroEmploye, String dateEmbauche, String prenom, String adresse, String contact){
+    private HashMap<Integer,Vol> volReserve;
+    private HashMap<Integer,Reservation> listeReservation;
+    public Passager(String passeport, String prenom, String adresse, String contact){
         super(prenom, adresse, contact);
         this.passeport = passeport;
+        this.volReserve = new HashMap<>();
+        this.listeReservation = new HashMap<>();
     }
     public String getPasseport() {
         return passeport;
@@ -21,8 +23,10 @@ public class Passager extends Personne{
         System.out.println("Passeport: " + passeport);
     }
     public void reserverVol(Vol vol){
+        System.out.println(vol.getNumeroVol());
         volReserve.put(vol.getNumeroVol(),vol);
         Reservation reservation = new Reservation();
+        listeReservation.put(reservation.getNumeroReservation(),reservation);
         reservation.getVol(vol);
         reservation.addResVol(vol);
     }
@@ -39,8 +43,10 @@ public class Passager extends Personne{
         Reservation reservation = listeReservation.get(idRes);
         reservation.setStatut("Annulée");
     }
-    public void obtenirReservation(int idRes){
+    public Reservation obtenirReservation(int idRes){
+        System.out.println(listeReservation);
         Reservation reservation = listeReservation.get(idRes);
         reservation.getInfos();
+        return reservation;
     }
 }
