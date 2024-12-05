@@ -21,6 +21,7 @@ public class Passager extends Personne{
     public void ObtenirInfos(){
         super.ObtenirInfos();
         System.out.println("Passeport: " + passeport);
+        System.out.println("");
     }
     public void reserverVol(Vol vol){
         System.out.println(vol.getNumeroVol());

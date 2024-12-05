@@ -93,6 +93,7 @@ public class Vol {
         System.out.println("Etat: " + etat);
         System.out.println("Pilote: " + pilote);
         System.out.println("Equipage cabine: " + equipageCabine);
+        System.out.println("");
     }
     public void annulerVol(int idVol){
         Vol vol = reservations.get(idVol);
@@ -108,6 +109,7 @@ public class Vol {
             Passager passager = listePassagers.get(i);
             System.out.println("Prenom :"+passager.getPrenom()+" / ID :"+passager.getID());
         }
+        System.out.println("");
     }
     public void planifierVol(LocalDate jour){
         System.out.println("Les vols prévu pour le "+jour.toString()+" sont les suivants:");

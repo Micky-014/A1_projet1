@@ -56,6 +56,7 @@ public class Avion {
         }
         else{
             System.out.println("L'avion n'est pas disponibke sur ces horaires");
+            System.out.println("");
         }
     }
 }

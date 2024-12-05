@@ -41,5 +41,6 @@ public class Personne {
         System.out.println("Prenom: "+getPrenom());
         System.out.println("Adresse: "+getAdresse());
         System.out.println("Contact: "+getContact());
+        System.out.println("");
     }
 }
