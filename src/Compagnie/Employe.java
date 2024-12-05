@@ -31,6 +31,7 @@ public class Employe extends Personne{
         super.ObtenirInfos();
         System.out.println("Numéro Employé: " + numeroEmploye);
         System.out.println("Date Embauche: " + dateEmbauche);
+        System.out.println("");
     }
     public void ObtenirRole(int iD){
         for (int i = 0; i < listEmployes.size(); i++){
@@ -39,5 +40,6 @@ public class Employe extends Personne{
                 break;
             }
         }
+        System.out.println("");
     }
 }
